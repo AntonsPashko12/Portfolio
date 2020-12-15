@@ -8,7 +8,7 @@ const keys = require('./keys')
 const mainRoutes = require('./routes/main')
 const ver1Routes = require('./routes/Ver1')
 const ver2Routes = require('./routes/ver2')
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 const hbs = exphbs.create({
     defaultLayout: 'main',
@@ -18,8 +18,8 @@ const hbs = exphbs.create({
 
 app.use(express.static('public'))
 
-http.listen(port, () => {
-    console.log('listening on', port)
+http.listen(PORT, () => {
+    console.log('listening on', PORT)
 })
 
 

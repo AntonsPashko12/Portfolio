@@ -23,6 +23,13 @@ http.listen(port, () => {
 
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(session({
+  secret: keys.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  store
+}))
+app.
 
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')

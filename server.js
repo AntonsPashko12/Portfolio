@@ -18,7 +18,7 @@ const hbs = exphbs.create({
 
 app.use(express.static('public'))
 
-http.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log('listening on', PORT)
 })
 
@@ -28,7 +28,6 @@ app.use(session({
   secret: keys.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
-  store
 }))
 
 app.engine('hbs', hbs.engine)

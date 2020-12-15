@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 let http = require('http').Server(app)
 const exphbs = require('express-handlebars')
+const session = require('express-session')
 const path = require('path')
 const keys = require('./keys')
 const mainRoutes = require('./routes/main')
@@ -29,7 +30,6 @@ app.use(session({
   saveUninitialized: false,
   store
 }))
-app.
 
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')

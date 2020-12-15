@@ -19,9 +19,8 @@ const hbs = exphbs.create({
 app.use(express.static('public'))
 
 app.listen(PORT, () => {
-    console.log('listening on', PORT)
+  console.log(`Server is running on port ${PORT}`)
 })
-
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(session({
